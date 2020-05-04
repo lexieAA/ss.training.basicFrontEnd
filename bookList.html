@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark" style="background-color:grey;">
+    <!-- <a class="navbar-brand" href="#">Book Store</a> -->
+  </nav>
+<div class="container-fluid">
+ <h2>Book List <span class="glyphicon glyphicon-book" aria-hidden="true"></span></h2>
+</div>
+
+<div class="container-fluid">
+  </br>
+  <ul>
+    <li id="item1"></li>
+    <li id="item2"></li>
+    <li id="item3"></li>
+    <li id="item4"></li>
+    <li id="item5"></li>
+    <li id="item6"></li>
+  </ul>
+</br>
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-danger active" onclick="pageOne()">
+    <input type="radio" name="options" id="option1"  autocomplete="off" checked> 1
+  </label>
+  <label class="btn btn-danger" onclick="pageTwo()">
+    <input type="radio" name="options" id="option2" autocomplete="off"> 2
+  </label>
+  <label class="btn btn-danger" onclick="pageThree()">
+    <input type="radio" name="options" id="option3" autocomplete="off"> 3
+  </label>
+  <label class="btn btn-danger" onclick="pageFour()">
+    <input type="radio" name="options" id="option3" autocomplete="off"> 4
+  </label>
+</div>
+
+</div>
+
+<script>
+class Book {
+  constructor(id, title, author) {
+    this.bookId = id;
+    this.bookTitle = title;
+    this.authorName = author;
+  }
+}
+
+book1 = new Book(1, "The Book", "Joe Doe");
+book2 = new Book(2, "The Bunny Book", " Mary Smith");
+book3 = new Book(3, "Apple", "Sam Thomas");
+book4 = new Book(4, "Hope", "Kim Parker");
+book5 = new Book(5, "War and Peace", "James Brown");
+book6 = new Book(6, "The Last Song", "Richard Willams");
+
+book7 = new Book(7, "The Blue Street", "Julie Douglas");
+book8 = new Book(8, "The Rabbit in the Hat", "Jacob Moores");
+book9 = new Book(9, "The Cat Returns", "Alex Janik");
+book10 = new Book(10, "The Good Book", "George M. Carter");
+book11 = new Book(11, "How to Cook 101", "Smith");
+book12 = new Book(12, "The Art", "Martha Manz");
+
+book13 = new Book(13, "French in 30 Day", "Ann S. Paulson");
+book14 = new Book(14, "Space Boy", "Johnny Gainer");
+book15 = new Book(15, "The City of Lights", "Margaret C. Slade");
+book16 = new Book(16, "Champions", "Kirby Gamino");
+book17 = new Book(17, "The Key to Life", "Samuel Freund");
+book18 = new Book(18, "Telephone", "Gregg Prim");
+
+book19 = new Book(19, "Taxes 101", "Louie Hogue");
+book20 = new Book(20, "The History of Hockey", "Keith M. Platt");
+
+document.getElementById("item1").innerHTML = "Book Id: "+ book1.bookId + ", Title: "+ book1.bookTitle + ", Book Author: "+ book1.authorName;
+document.getElementById("item2").innerHTML = "Book Id: "+ book2.bookId + ", Title: "+ book2.bookTitle + ", Book Author: "+ book2.authorName;
+document.getElementById("item3").innerHTML = "Book Id: "+ book3.bookId + ", Title: "+ book3.bookTitle + ", Book Author: "+ book3.authorName;
+document.getElementById("item4").innerHTML = "Book Id: "+ book4.bookId + ", Title: "+ book4.bookTitle + ", Book Author: "+ book4.authorName;
+document.getElementById("item5").innerHTML = "Book Id: "+ book5.bookId + ", Title: "+ book5.bookTitle + ", Book Author: "+ book5.authorName;
+document.getElementById("item6").innerHTML = "Book Id: "+ book6.bookId + ", Title: "+ book6.bookTitle + ", Book Author: "+ book6.authorName;
+
+function pageOne() {
+  document.getElementById("item1").innerHTML = "Book Id: "+ book1.bookId + ", Title: "+ book1.bookTitle + ", Book Author: "+ book1.authorName;
+  document.getElementById("item2").innerHTML = "Book Id: "+ book2.bookId + ", Title: "+ book2.bookTitle + ", Book Author: "+ book2.authorName;
+  document.getElementById("item3").innerHTML = "Book Id: "+ book3.bookId + ", Title: "+ book3.bookTitle + ", Book Author: "+ book3.authorName;
+  document.getElementById("item4").innerHTML = "Book Id: "+ book4.bookId + ", Title: "+ book4.bookTitle + ", Book Author: "+ book4.authorName;
+  document.getElementById("item5").innerHTML = "Book Id: "+ book5.bookId + ", Title: "+ book5.bookTitle + ", Book Author: "+ book5.authorName;
+  document.getElementById("item6").innerHTML = "Book Id: "+ book6.bookId + ", Title: "+ book6.bookTitle + ", Book Author: "+ book6.authorName;
+}
+
+function pageTwo() {
+  document.getElementById("item1").innerHTML = "Book Id: "+ book7.bookId + ", Title: "+ book7.bookTitle + ", Book Author: "+ book7.authorName;
+  document.getElementById("item2").innerHTML = "Book Id: "+ book8.bookId + ", Title: "+ book8.bookTitle + ", Book Author: "+ book8.authorName;
+  document.getElementById("item3").innerHTML = "Book Id: "+ book9.bookId + ", Title: "+ book9.bookTitle + ", Book Author: "+ book9.authorName;
+  document.getElementById("item4").innerHTML = "Book Id: "+ book10.bookId + ", Title: "+ book10.bookTitle + ", Book Author: "+ book10.authorName;
+  document.getElementById("item5").innerHTML = "Book Id: "+ book11.bookId + ", Title: "+ book11.bookTitle + ", Book Author: "+ book11.authorName;
+  document.getElementById("item6").innerHTML = "Book Id: "+ book12.bookId + ", Title: "+ book12.bookTitle + ", Book Author: "+ book12.authorName;
+}
+
+function pageThree() {
+  document.getElementById("item1").innerHTML = "Book Id: "+ book13.bookId + ", Title: "+ book13.bookTitle + ", Book Author: "+ book13.authorName;
+  document.getElementById("item2").innerHTML = "Book Id: "+ book14.bookId + ", Title: "+ book14.bookTitle + ", Book Author: "+ book14.authorName;
+  document.getElementById("item3").innerHTML = "Book Id: "+ book15.bookId + ", Title: "+ book15.bookTitle + ", Book Author: "+ book15.authorName;
+  document.getElementById("item4").innerHTML = "Book Id: "+ book16.bookId + ", Title: "+ book16.bookTitle + ", Book Author: "+ book16.authorName;
+  document.getElementById("item5").innerHTML = "Book Id: "+ book17.bookId + ", Title: "+ book17.bookTitle + ", Book Author: "+ book17.authorName;
+  document.getElementById("item6").innerHTML = "Book Id: "+ book18.bookId + ", Title: "+ book18.bookTitle + ", Book Author: "+ book18.authorName;
+}
+
+function pageFour() {
+  document.getElementById("item1").innerHTML = "Book Id: "+ book19.bookId + ", Title: "+ book19.bookTitle + ", Book Author: "+ book19.authorName;
+  document.getElementById("item2").innerHTML = "Book Id: "+ book20.bookId + ", Title: "+ book20.bookTitle + ", Book Author: "+ book20.authorName;
+  document.getElementById("item3").innerHTML = "";
+  document.getElementById("item4").innerHTML = "";
+  document.getElementById("item5").innerHTML = "";
+  document.getElementById("item6").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
